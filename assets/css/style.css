@@ -4,6 +4,13 @@ body {
 	background-color: #000000;
 }
 
+.hidden {
+    visibility: hidden;
+    overflow: hidden;
+    width: 0px;
+    height: 0px;
+}
+
 #row1 {
 	height: 75px;
 }
@@ -12,12 +19,24 @@ body {
 	background-repeat: no-repeat;
 	max-width: 100%;
 	max-height: 100%;
+	padding-top: 10px;
 }
 
-img {
+.mySlides {
 	max-width:100%;
     max-height:100%;
     border-radius: 15px 15px;
+}
+
+
+
+#lonestar {
+	margin: 20px 20px 0px 115px;
+}
+
+
+#clickbeerbottle {
+	margin: 30px 105px 0px 15px;
 }
 
 
@@ -71,4 +90,5 @@ img {
 #footer {
 	text-align: center;
 	padding-top: 20px;
+	padding-right: 92px;
 }
