@@ -54,6 +54,7 @@ body {
 }
 
 
+
 #questions, #timer {
 	margin: 5px 5px 5px 5px;
 	padding-left: 5px;
@@ -61,8 +62,16 @@ body {
 	background-color: #fff;
 	border-color: #000000;
 	font-weight: bold;
-	font-family: "Texas";
 	word-wrap: break-word;
+}
+
+
+#questions {
+	font-family: "Texas";
+}
+
+#timer {
+	font-family: Times;
 }
 
 
@@ -89,6 +98,6 @@ body {
 
 #footer {
 	text-align: center;
-	padding-top: 20px;
+	padding-top: 15px;
 	padding-right: 92px;
 }

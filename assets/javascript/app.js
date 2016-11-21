@@ -1,26 +1,43 @@
 $(document).ready(function() {
 
-  $('#lonestar', '#clickbeerbottle').on("click", function() {
-    $('#lonestar', '#clickbeerbottle').addClass('hidden');
-    $('.QApanel', '.timerPanel').removeClass('hidden');
+  //var timer = setTimeout('countDown('+secs+', "'+elem+'")', 1000);
+
+  /*function countDown(secs,elem) {
+    var element = document.getElementById(elem);
+    element.innerHTML = "Time Remaining: " + secs + " seconds"
+    secs--;
+    var timer = setTimeout('countDown('+secs+', "'+elem+'")', 1000);
+    if (secs < 1){
+    	clearTimeout(timer);
+    	element.innerHTML = '<h2>Countdown complete!</h2>';
+    	element.innerHTML += '<a href="#">Click here now</a>';
+    };
+  };*/
+
+  $("#lonestar").on("click", function() {
+    $("#lonestar, #clickbeerbottle").hide("fast");
+    $(".QApanel, .timerPanel, .btn-primary").removeClass("hidden");
+   	countDown(30, "timer");
   });
 
 });
 
 
-  /*var myIndex = 0;
-  carousel();
 
-  function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) {
-        myIndex = 1
-    }
-    x[myIndex - 1].style.display = "block";
-    setTimeout(carousel, 4000); // Change image every 2 seconds
- }*/
+//Ask why plus signs around secs and elem are necessary
+var timer = setTimeout('countDown('+secs+', "'+elem+'")', 1000);
+
+function countDown(secs,elem) {
+	var element = document.getElementById(elem);
+	element.innerHTML = "Time Remaining: " + secs + " seconds"
+	secs--;
+	var timer = setTimeout('countDown('+secs+', "'+elem+'")', 1000);
+	if (secs < 1){
+		clearTimeout(timer);
+		element.innerHTML = '<h2>Countdown complete!</h2>';
+		element.innerHTML += "<a href='#'>Click here now</a>";
+	};
+};
+
+
+  
