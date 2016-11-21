@@ -55,10 +55,10 @@ body {
 
 
 
-#questions, #timer {
+#questionPanel, #timer {
 	margin: 5px 5px 5px 5px;
 	padding-left: 5px;
-	color: #000000;
+	color: #000;
 	background-color: #fff;
 	border-color: #000000;
 	font-weight: bold;
@@ -66,8 +66,18 @@ body {
 }
 
 
-#questions {
-	font-family: "Texas";
+#questionPanel {
+	font-family: Times;
+
+}
+
+#choicesList {
+	font-family: Times;
+	color: #fff;
+}
+
+ul {
+	list-style-type: none;
 }
 
 #timer {
