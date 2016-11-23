@@ -12,8 +12,8 @@ $(document).ready(function() {
 
 	 //Defines questions variable and subsequent objects
 	 var questions = [{
-	 	question: 'What was the term coined by Michael Martin Murphey to describe the cultural confluence of hippies and rednecks in early 1970s Austin?',
-	 	choices: ['Longhair Kicker', 'Cosmic Cowboy', 'Hippie Redneck', 'Psychedelic Cowboy'],
+	 	question: 'Which singer-songwriter coined the term "Cosmic Cowboy to describe the confluence of hippies and rednecks in early 1970s Austin?',
+	 	choices: ['Jerry Jeff Walker', 'Michael Martin Murphey', 'Guy Clark', 'Townes Van Zandt'],
 	 	correctAnswer: 1
 	 },
 	 {
@@ -32,7 +32,7 @@ $(document).ready(function() {
 	 	correctAnswer: 2
 	 },
 	 {
-	 	question: 'What is the name of the conjunto-rock and roll supergroup formed by Doug Sahm, Flaco Jim&eacute;nez, Freddy Fender, and Augies Meyers?',
+	 	question: 'What is the name of the conjunto-rock and roll supergroup formed by Doug Sahm, Flaco Jimenez, Freddy Fender, and Augies Meyers?',
 	 	choices: ['Asleep at the Wheel', 'Greezy Wheels', 'Balcones Fault', 'Texas Tornados'],
 	 	correctAnswer: 3
 	 }];
@@ -46,7 +46,7 @@ $(document).ready(function() {
 	//Other variables
 	var i = 0;
 	var lengthL = questions.length;
-	var correctAnswer = 0;
+	var buttonName = "question"+i+"_choices";
 
 
 	//Itterate through questions when next button is clicked
@@ -56,7 +56,23 @@ $(document).ready(function() {
 		}
 		nextQuestion(i);
 		i++;
-	};	
+	};
+
+
+
+	function createLi(name, choiceText) {
+        var e = document.createElement('li');
+        var radioBtnHtml = '<input type="radio" id="radioButton" name="' + name + '"';    
+        radioBtnHtml += '/>';
+        radioBtnHtml += choiceText;        
+        e.innerHTML = radioBtnHtml;        
+        return e;
+	};
+
+
+	document.getElementsByName("question"+i+"_choices").click(function() {
+		alert("asdlkfja");
+	});
 
 
 	function nextQuestion(qNum) {
@@ -65,27 +81,17 @@ $(document).ready(function() {
 
 		choicesList.innerHTML = ""; //Resets choices list
 		for (key in individualQuestion.choices) {
-			 var radioBtnName = "question"+i+"_choice";
+			 var buttonName = "question"+i+"_choices";
 			 var choiceText = individualQuestion.choices[key];
-			 choicesList.appendChild(createLi(radioBtnName,choiceText));
-		}
+			 choicesList.appendChild(createLi(buttonName,choiceText));
+		};
+
 	};
 
-
-	function createLi(name, choiceText) {
-        var e = document.createElement('li');
-        var buttonHtml = '<input type="button" name="' + name + '"';    
-        buttonHtml += '/>';
-        buttonHtml += choiceText;        
-        e.innerHTML = buttonHtml;        
-        return e;
-	};
 
   });
 
 });
-
-
 	//Ask why plus signs around secs and elem are necessary
 	//var timer = setTimeout('countDown('+secs+', "'+elem+'")', 1000);
 
