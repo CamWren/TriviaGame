@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 	 //Defines questions variable and subsequent objects
 	 var questions = [{
-	 	question: 'Which singer-songwriter coined the term "Cosmic Cowboy to describe the confluence of hippies and rednecks in early 1970s Austin?',
+	 	question: 'Which singer-songwriter coined the term "Cosmic Cowboy" to describe the confluence of hippies and rednecks in early 1970s Austin?',
 	 	choices: ['Jerry Jeff Walker', 'Michael Martin Murphey', 'Guy Clark', 'Townes Van Zandt'],
 	 	correctAnswer: 1
 	 },
